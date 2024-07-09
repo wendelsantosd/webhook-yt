@@ -1,0 +1,11 @@
+services:
+  cob_webhook:
+    build: .
+    container_name: cob_webhook
+    env_file:
+      - ./.env
+    ports:
+      - 1338:1338
+      - 9229:9229
+    volumes:
+      - .:/opt/app
